@@ -123,7 +123,7 @@ public class AdMonitorManager {
     private static void regListener(Context context) {
         if (!isLifecycleListened) {
             checkNotNull(context, "上下文不能为空");
-            if (!(context instanceof MainApplication)) {
+            if (!(context instanceof Application)) {
                 throw new IllegalArgumentException("上下文必须为ApplicationContext");
             }
             ((MainApplication) context).registerActivityLifecycleCallbacks(new Application.ActivityLifecycleCallbacks() {
